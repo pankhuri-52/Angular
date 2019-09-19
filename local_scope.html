@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body ng-app="App1">
+<p ng-controller="Ctrl">Welcome {{name}}</p>
+<p>Welcome {{name1}}</p>
+<script>
+	var app=angular.module("App1",[]);
+	app.controller("Ctrl",function($scope,$rootScope){
+         $scope.name="Pankhuri";
+        $rootScope.name1="Raj";
+	});
+</script>
+</body>
+</html>
