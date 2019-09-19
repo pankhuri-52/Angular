@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<title>Expressions</title>
+</head>
+<body>
+<div ng-app="myapp" ng-controller="myctrl">
+   First Name: <input type="text" ng-model="firstName"><br><br>
+   Last Name: <input type="text" ng-model="LastName"><br><br>
+   Full Name : {{firstName + " " + LastName}}
+</div>
+   <script>
+   	var app=angular.module('myapp',[]);
+   	app.controller('myctrl',function($scope){
+         $scope.firstName="Pankhuri";
+         $scope.LastName="Trikha";
+   	});
+   </script>
+</body>
+</html>
