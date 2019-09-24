@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<title>Expressions</title>
+</head>
+<body>
+	<div ng-app="myapp" ng-controller="cntrl1">
+		<center><h1>Login</h1></center>
+		<form>
+			Username: <input type="text" ng-model="name"><br><br>
+			Password: <input type="password" ng-model="password"><br><br>
+			<button ng-click="count(1)">Submit</button>
+			<p>You have clicked {{number}} of times</p>
+		</form>
+	</div>
+	<script>
+		var mod=angular.module("myapp",[]);
+		mod.controller("cntrl1",function($scope){
+               $scope.number=0;
+              $scope.count=function(inc){
+              	
+              	$scope.number+=inc;
+              }
+		});
+	</script>
+</body>
+</html>
