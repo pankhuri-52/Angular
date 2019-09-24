@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<title>Expressions</title>
+</head>
+<body>
+<div ng-app="myapp" ng-controller="mycntrl2">
+	Absent: <input type="text" ng-model="absent">
+	<button ng-click="presentees(absent)">Click Me</button>
+	<p>The number of students present are: {{present}}</p>
+</div>
+<script>
+     var mod=angular.module("myapp",[]);
+     mod.controller("mycntrl2",function($scope){
+          $scope.total=45;
+          $scope.presentees=function(x){
+          	$scope.present=$scope.total-x;
+          }
+     });
+</script>
+</body>
+</html>
