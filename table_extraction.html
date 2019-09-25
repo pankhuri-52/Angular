@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<title>Expressions</title>
+</head>
+<body>
+	<div ng-app="myapp" ng-controller="mycntrl3">
+        <table border="2px" >
+        	<tr>
+        		<td>Class</td>
+        		<td>Subject</td>
+        	</tr>
+        	<tr ng-repeat="v in tables">
+        		<td>{{v.Class}}</td>
+        		<td>
+        			<table border='2px'>
+        				<tr ng-repeat="s in v.subject">
+        					<td>{{s.id}}</td>
+        					<td>{{s.name}}</td>
+        				</tr>
+        			</table>
+        		</td>
+        	</tr>
+        </table>
+     </div>
+	<script>
+		var mod=angular.module("myapp",[]);
+		mod.controller("mycntrl3",function($scope){
+             $scope.tables=[
+             {Class:'A',subject:[{id:1,name:'APC'},
+                                 {id:2, name:'WP'}]},
+             {Class:'B',subject:[{id:1,name:'APC'},
+                                  {id:2,name:'ADI'},
+                                  {id:3,name:'OS'}]}
+             ];
+		});
+	</script>
+</body>
+</html>
