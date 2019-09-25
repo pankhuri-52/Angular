@@ -4,8 +4,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 	<title>Expressions</title>
 </head>
-<body>
-	<div ng-app="myapp" ng-controller="cntrl1">
+<body ng-app="">
+	<!-- <div ng-app="myapp" ng-controller="cntrl1">
 		<center><h1>Login</h1></center>
 		<form>
 			Username: <input type="text" ng-model="name"><br><br>
@@ -23,6 +23,11 @@
               	$scope.number+=inc;
               }
 		});
-	</script>
+	</script> -->
+
+	<button ng-click="count=count+1" ng-init="count=0">Increment</button>
+	<div>The current count is {{count}}</div>
+
+
 </body>
 </html>
