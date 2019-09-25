@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Filter- Order By</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-app="myapp" ng-controller="mycntrl">
+	<ul ng-repeat="x in Class | orderBy:'name'">
+		<li>{{x.name +','+ x.marks}}</li>
+	</ul>
+	<script>
+		var mod=angular.module("myapp",[]);
+		mod.controller("mycntrl",function($scope){
+            $scope.Class=[{name:'Raj', marks:20},
+                           {name:'Dev', marks:10},
+                           {name:'Arti', marks:40}
+            ]
+		});
+	</script>
+	</body>
+</html>
