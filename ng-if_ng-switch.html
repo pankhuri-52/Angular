@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ng-if and ng-switch</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-app="">
+	<!-- Welcoming you :<input type="checkbox" ng-model="myvar" ng-init="myvar=true">
+	<div ng-if="myvar">
+		<h1>Welcoming you</h1>
+	</div> -->
+
+	<select ng-model="myvar">
+		<option value="tea">Tea</option>
+		<option value="coffee">Coffee</option>
+		<option value="Green-Tea">Green Tea</option>
+	</select>
+
+	<div ng-switch="myvar">
+		<div ng-switch-when="tea">
+			<h1>Tea</h1>
+			<p>We add milk, tea leaves and water in tea</p>
+		</div>
+		<div ng-switch-when="coffee">
+			<h1>Coffee</h1>
+			<p>We add coffee, milk and sugar in coffee</p>
+		</div>
+		<div ng-switch-when="Green-Tea">
+			<h1>Green Tea</h1>
+			<p>We add green tea leaves and water in green tea</p>
+		</div>
+		</div>
+</body>
+</html>
