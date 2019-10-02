@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ng-Model</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> 
+	<body>
+		<div ng-app="" ng-init="quantity=5;cost=1">
+			Quantity: <input type="number" ng-model="quantity">
+			Price: <input type="number" ng-model="cost">
+            <p>You got {{quantity*cost}} rupees</p>
+		</div>
+	</body>
+</html>
