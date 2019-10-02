@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<title>Different States</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+	<form ng-app="" name="myform" ng-init="mytext='pankhuritrikha@gmail.com'">
+		<input type="email" name="email" ng-model="mytext" required>
+		<p>Valid: {{myform.email.$valid}}</p>
+		<p>Dirty: {{myform.email.$dirty}}</p>
+		<p>Touched: {{myform.email.$touched}}</p>
+	</form>
+</body>
+</html>
