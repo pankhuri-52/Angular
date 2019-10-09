@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>  
+<body ng-app="">
+
+<p>Try writing an E-mail address in the input field:</p>
+<br>
+<form name="myForm" style="background-color:blue;">
+ <fieldset>
+Email <input type="email" name="email" ng-model="email"><br>
+<span ng-show="myForm.email.$pristine">Required!</span>
+<span ng-show="myForm.email.$invalid">Not Valid Email!</span>
+<!-- <span ng-show="myForm.email.$valid">Valid Email</span> -->
+<br>
+Password <input type="password" name="passwd" ng-model="passwd" ng-minlength=5 ng-maxlength=10>
+<br>
+<span ng-show="myForm.passwd.$pristine">Required!</span>
+<span ng-show="myForm.passwd.$error.minlength">Too Short!</span>
+<span ng-show="myForm.passwd.$error.maxlength">Too long!</span>
+
+<br>
+ </fieldset>
+</form>
+
+</body>
+</html>
