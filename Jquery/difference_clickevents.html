@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>event.timeStamp demo</title>
+  <script src="jquery-3.4.1.min.js"></script>
+</head>
+<body>
+ 
+<p>Click On Me.</p>
+ 
+<script>
+var last, diff;
+$( "p" ).click(function( event ) {
+  if ( last ) {
+    diff = event.timeStamp - last;
+    $( "p" ).append( "time since last event: " + diff + "<br>" );
+  } else {
+    $( "p" ).append( "Click again.<br>" );
+  }
+  last = event.timeStamp;
+});
+</script>
+ 
+</body>
+</html>
