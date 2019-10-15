@@ -4,16 +4,16 @@
 	<script src="jquery-3.4.1.min.js"></script>
      <title>Background colour changes on double click</title>
      <style>
-     	p{
+     	body{
      		background-color:blue;
      	}
-     	p.dbl {
+     	body.dbl {
      		background-color:yellow;
      	}
      </style>
      <script>
         $(document).ready(function(){
-        	var pdbl=$("p");
+        	var pdbl=$("body");
         	pdbl.dblclick(function(){
         		pdbl.toggleClass("dbl");
         	});
