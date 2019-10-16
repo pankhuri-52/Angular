@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Two-way data binding</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<body>
+		<div ng-app="myapp" ng-controller="ctrl">
+			<input type="text" ng-model="name">
+			<h1>You entered: {{name}}</h1>
+		</div>
+		<script>
+			var mod=angular.module("myapp",[]);
+			mod.controller("ctrl",function($scope){
+				$scope.name="Pankhuri Trikha";
+			});
+		</script>
+	</body>
+</html>

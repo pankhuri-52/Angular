@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ng-if and ng-switch</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-app="">
+	<h3>Select the input box for whose data you want to see</h3>
+	<select ng-model="myvar">
+		<option value="Faculty" ng-selected>Faculty</option>
+		<option value="Students">Students</option>
+		<option value="Employees">Employees</option>
+	</select>
+
+	<div ng-switch="myvar">
+		<div ng-switch-when="Faculty">
+			<br>
+			<table border="1px solid black" cellspacing="0">
+				<tr>
+					<th>S.No.</th>
+					<th>Name</th>
+					<th>Dept No.</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Mudita Mam</td>
+					<td>Web Programming</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Shikha Mam</td>
+                    <td>ADBMS</td>
+			</table>
+		</div>
+		<div ng-switch-when="Students">
+			<br>
+			<table border="1px solid black" cellspacing="0">
+				<tr>
+					<th>S.No.</th>
+					<th>Name</th>
+					<th>Marks</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Priya</td>
+					<td>45</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Raj</td>
+                    <td>89</td>
+			</table>
+		</div>
+		<div ng-switch-when="Employees">
+			<br>
+			<table border="1px solid black" cellspacing="0">
+				<tr>
+					<th>S.No.</th>
+					<th>Name</th>
+					<th>IdNO.</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Suresh</td>
+					<td>145</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Ramesh</td>
+                    <td>289</td>
+			</table>
+		</div>
+		</div>
+</body>
+</html>
