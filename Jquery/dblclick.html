@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="jquery-3.4.1.min.js"></script>
+     <title>Background colour changes on double click</title>
+     <style>
+     	body{
+     		background-color:blue;
+     	}
+     	body.dbl {
+     		background-color:yellow;
+     	}
+     </style>
+     <script>
+        $(document).ready(function(){
+        	var pdbl=$("body");
+        	pdbl.dblclick(function(){
+        		pdbl.toggleClass("dbl");
+        	});
+        });
+     </script>
+</head>
+<body>
+		<p>Double CLick on me</p>
+</body>
+</html>

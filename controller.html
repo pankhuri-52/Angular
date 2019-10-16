@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,4 +15,22 @@
 			});
 		</script>
 	</body>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Use of Controller</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<body ng-app="myapp" ng-controller="myctrl">
+		<ul>
+			<li ng-repeat="x in names">{{x}}</li>
+		</ul>
+		<script>
+			var mod=angular.module("myapp",[]);
+			mod.controller("myctrl",function($scope){
+                  $scope.names=['Raj','Ramesh','Ritu','Ram','Ritzii']
+			});
+		</script>
+	</body>
+>>>>>>> ea88fad2edbdefaef45a5cc14753fc89a7f31891
 </html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="jquery-3.4.1.min.js"></script>
+     <title>Stop the user from entering</title>
+     <script>
+     	$(document).ready(function(){
+     		$(".inp").focus(function(){
+     			$(".inp").blur();
+     		});
+     	});
+     </script>
+</head>
+<body>
+	<form>
+		Name :<input type="text" name="Name" class="inp"><br><br>
+		RollNo.: <input type="number" name="rollno"><br><br>
+		Address: <textarea rows="5" cols="10"></textarea>
+	</form>
+</body>
+</html>
