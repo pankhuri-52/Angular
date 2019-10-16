@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Use of Controller</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-app="">
+   Select Subject: <select ng-model="mysub">
+   	               <option value="WP">WP</option>
+   	               <option value="CSA">CSA</option>
+   	               <option value="ADBMS">ADBMS</option>
+   	               <option value="APC">APC</option>
+   	               </select>
+         <div ng-switch="mysub">  
+  <div ng-switch-when="WP">  
+     <p>You have selected WP subject</p>  
+  </div>  
+  <div ng-switch-when="CSA">  
+     <p>You have selected CSA subject</p> 
+  </div>  
+  <div ng-switch-when="ADBMS">   
+      <p>You have selected ADBMS subject</p>
+  </div>  
+  <div ng-switch-when="APC">  
+      <p>You have selected APC subject</p>
+ </div>  
+  <div ng-switch-default> 
+      <p>You have not selected any input</p>
+  </div>  
+</body>
+</html>
