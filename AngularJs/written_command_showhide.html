@@ -7,14 +7,17 @@
 <body ng-app="app1" ng-controller="Ctrl1">
    <input type="text" ng-model="showdown" >
    <p>Type either Show or Hide in the textbox</p>
-   <div ng-show="showdown=='Show'">
+   <div ng-show="myvalue">
    	  My Name is Pankhuri Trikha, currently doing Btech from Chitkara University.
    	  I am from Karnal, Haryana, 132001.
    </div>
    <script>
    	var mod=angular.module("app1",[]);
    	mod.controller("Ctrl1",function($scope){
-   		
+   		 $scope.myvalue=false;
+          if($scope.showdown=="Show")
+            $scope.myvalue=true;
+
    	});
    </script>
 </body>
